@@ -4,7 +4,7 @@
     <!--Utilizando diretiva para modificar o DOM-->
     <div>
         <h3>
-            <a [title]="product.name + ' detalhes'">
+            <a [title]="product.name + ' detalhes'" [routerLink]="['/produtos', product.id]">
                 {{ product.name }}
             </a>
         </h3>
@@ -23,3 +23,4 @@
     </div>
 
 </div>
+
