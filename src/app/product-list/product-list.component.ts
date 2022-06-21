@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-
-import { products } from '../products';
+import { Product, products } from '../products';
 
 @Component({
   selector: 'app-product-list',
@@ -10,14 +9,11 @@ import { products } from '../products';
 export class ProductListComponent {
   products = products;
 
-  share() {
-    window.alert('The product has been shared!');
+  share(produto: Product) {
+    window.alert(produto.name + ` Compartilhado!`);
+  }
+
+  onNotify() {
+    window.alert('Será enviado uma notifcação quando tiver estoque do produto!');
   }
 }
-
-
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
-*/
