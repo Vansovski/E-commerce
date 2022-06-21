@@ -8,14 +8,20 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProdutoAlertaComponent } from './produto-alerta/produto-alerta.component';
 import { ProdutoDetalhesComponent } from './produto-detalhes/produto-detalhes.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { HttpClientModule } from '@angular/common/http';
+import { EntregaComponent } from './entrega/entrega.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
-      { path: 'produtos/:produtoId', component: ProdutoDetalhesComponent}
+      { path: 'produtos/:produtoId', component: ProdutoDetalhesComponent},
+      { path: 'carrinho', component: CarrinhoComponent},
+      { path: 'entrega', component: EntregaComponent}
     ])
   ],
   declarations: [
@@ -23,7 +29,9 @@ import { ProdutoDetalhesComponent } from './produto-detalhes/produto-detalhes.co
     TopBarComponent,
     ProductListComponent,
     ProdutoAlertaComponent,
-    ProdutoDetalhesComponent
+    ProdutoDetalhesComponent,
+    CarrinhoComponent,
+    EntregaComponent
   ],
   bootstrap: [
     AppComponent

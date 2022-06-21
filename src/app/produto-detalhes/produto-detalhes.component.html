@@ -4,4 +4,6 @@
   <h3>{{ produto.name }}</h3>
   <h4>{{ produto.price | currency }}</h4>
   <p>{{ produto.description }}</p>
+
+  <button type="button" (click)="addAoCorrinho(produto)">Comprar</button>
 </div>
