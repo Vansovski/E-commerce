@@ -1,26 +1,33 @@
-<h2>Produtos</h2>
+<h1>Produtos</h1>
 
-<div *ngFor="let product of products" class="bg-primary">
-    <!--Utilizando diretiva para modificar o DOM-->
-    <div>
-        <h3>
-            <a [title]="product.name + ' detalhes'" [routerLink]="['/produtos', product.id]">
-                {{ product.name }}
-            </a>
-        </h3>
 
-        <p *ngIf="product.description">
-            Informações: {{ product.description }}
-        </p>
+<div class="container ">
+    <div class="row">
 
-        <button type="button" (click)="share(product)">
-            Compartilhar
-        </button>
-
-        <app-produto-alerta [produto]="product" (notificar)="onNotify()">
-
-        </app-produto-alerta>
+        <div *ngFor="let product of products" class="card col-3 m-2 p-2 border">
+            <!--Utilizando diretiva para modificar o DOM-->
+            <div>
+                <h3>
+                    <a [title]="product.name + ' detalhes'" [routerLink]="['/produtos', product.id]">
+                        {{ product.name }}
+                    </a>
+                </h3>
+        
+                <p *ngIf="product.description">
+                    Informações: {{ product.description }}
+                </p>
+        
+                <button type="button" (click)="share(product)" class="my-2">
+                    Compartilhar
+                </button>
+        
+                <app-produto-alerta [produto]="product" (notificar)="onNotify()">
+        
+                </app-produto-alerta>
+            </div>
+        
+        </div>
+    
     </div>
-
 </div>
 

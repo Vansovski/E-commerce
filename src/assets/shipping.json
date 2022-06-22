@@ -1,14 +1,14 @@
 [
   {
-    "type": "Overnight",
+    "type": "SEDEX-10",
     "price": 25.99
   },
   {
-    "type": "2-Day",
+    "type": "SEDEX",
     "price": 9.99
   },
   {
-    "type": "Postal",
+    "type": "PAC",
     "price": 2.99
   }
 ]
